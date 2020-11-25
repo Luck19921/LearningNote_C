@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main()
+{
+   FILE *fp; //創建fp指標的FILE類型變數
+   fp = fopen("file.txt", "w"); //fp = 被指定了開啟file.txt檔案的一個變數
+   fprintf(fp, "%s", "This is gitbook.net");
+   fclose(fp); //關閉檔案(當初開啟檔案的變數名稱)
+   System("PAUSE");
+   return(0);
+}
