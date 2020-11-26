@@ -4,6 +4,7 @@
 
 int main()
 {
+    //從branch分支 -> merge進入 -> main主branch
     //如何初始化? 三種方式->1.宣告就初始 2.memset 3.bzero
     char buf[256];
     char buf2[256];
