@@ -4,8 +4,13 @@
 
 int main()
 {
-    //在這邊改了Snprintf.c files後儲存
-    //從branch分支 -> merge進入 -> main主branch
+    /*
+    snprintf(char *c, charsize *c_len, char *format);
+    返回值:成功回傳字串長度, 失敗則回傳-1
+    Ex:將char Score[256]填滿字串1234567890
+    char Score[256] = {0};
+    snprintf(Score, sizeof(Score), "%s", "1234567890");
+    */
     //如何初始化? 三種方式->1.宣告就初始 2.memset 3.bzero
     char buf[256];
     char buf2[256];
