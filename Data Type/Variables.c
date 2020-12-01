@@ -9,6 +9,7 @@ int main()
   int myInt = 0;
   float myFloat = 0; //單精度 準確沒有double來得高
   double myDouble = 0; // 雙精度 非常精準
+  _Bool myBool = 0;
 
   memset(myArray, '\0', sizeof(myArray));
   myString = 'B';
@@ -22,6 +23,7 @@ int main()
   printf("This is my Int: %d\n", myInt);
   printf("This is my Float: %.2f\n", myFloat);
   printf("This is my Double: %11.9f\n", myDouble);
+  printf("This is my Bool: %d\n", myBool);
   /*
   %s = String for String Array
   %c = Char for A word

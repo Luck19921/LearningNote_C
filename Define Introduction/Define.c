@@ -15,5 +15,5 @@ int main()
   printf("The document was established on %d/%d/%d...\n", year, month, day);
   printf("Author: %s\nReferences: %s\n", name, url);
 
-
+  return 0;
 }
