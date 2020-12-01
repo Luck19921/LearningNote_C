@@ -23,7 +23,7 @@ int main()
   printf("This is my Int: %d\n", myInt);
   printf("This is my Float: %.2f\n", myFloat);
   printf("This is my Double: %11.9f\n", myDouble);
-  printf("This is my Bool: %d\n", myBool);
+  printf("This is my Bool: %d \n", myBool);
   /*
   %s = String for String Array
   %c = Char for A word
