@@ -1,0 +1,3 @@
+Albert just wirtes this text
+Txt File中的第二行內容
+fprintf(fopen的變數, %s是輸入格式, 將被輸入的內容);
