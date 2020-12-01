@@ -18,7 +18,9 @@ int main()
 {
   char arr[100] = {"Hello world"};
   unsigned int len = strlen(arr);
-  printf("Sizeof Arr:%d, strlen(arr):%d\n", sizeof(arr), len);
+  //Sizeof代表著陣列的容量, 而Strlen則是代表陣列內實際包含元素的寬度
+  printf("Sizeof Arr:%d\nstrlen(arr):%d\n", sizeof(arr), len);
   printf("arr: %s\n", arr);
   puts(arr);
+  //puts 有點像是列印pritnf函式
 }
