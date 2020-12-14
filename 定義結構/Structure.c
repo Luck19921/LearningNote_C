@@ -19,6 +19,7 @@ int main()
   struct Account acct2 = {.balance = 1020, .name = "Yagoo Cheng", .id = "080-080-000"};
   struct Account acct3[] = {
                           {.balance = 100, .name = "Mr.Poor", .id = "000-000-001"},
+                          {.name = "Mr.Middle", .id = "555-555-555", .balance = 5568},
                           {.balance = 1000000, .name = "Mr.Rich", .id = "999-999-990"}
                           };
   int lengthAC = sizeof(acct3) / sizeof(acct3[0]); //Find the length of array
@@ -32,10 +33,6 @@ int main()
   for (int i = 0; i < lengthAC; i ++) {
     printAcct(acct3[i]);
   }
-
-
-
-
   return 0;
 }
 
