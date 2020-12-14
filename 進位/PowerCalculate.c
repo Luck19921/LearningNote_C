@@ -16,3 +16,8 @@ int main()
   printf("The power of seventh(2^7) -1 = %d\n", result5);
   return 0;
 }
+
+/*
+Power Calculate
+次方數學運算
+*/
