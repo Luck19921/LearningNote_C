@@ -29,7 +29,6 @@ int main()
   acct.balance = 9999;
   printAcct(acct);
   printAcct(acct2);
-
   for (int i = 0; i < lengthAC; i ++) {
     printAcct(acct3[i]);
   }
@@ -45,7 +44,7 @@ acct則是根據Account結構(struct)所建立的實例
 宣告方式也可以先建立實例後，一一將成員帶出並賦予值(acct)
 也可以使用第二種方式，宣告同時初始化，過程可以不用按照成員順序(acct2)
 p.s. 在定義建構時，就已經決定好其各成員的順序了
-可以一次宣告並初始化多組資料(acct3)
+透過宣告陣列，可以一次性初始化多筆資料(acct3)
 
 測量Array的方法:
 假設我們有一個Array => myList[?]
