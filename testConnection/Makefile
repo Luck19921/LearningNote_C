@@ -4,4 +4,4 @@ all: project
 project:	func1.o myBody.o
 	gcc *.o -o a.exe
 
-//Tic大大寫的Makefile
+//Tic大大寫的Makefile#1
