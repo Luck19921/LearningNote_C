@@ -3,11 +3,29 @@
 
 typedef const char* String;
 
-struct Account {
+// struct Account {
+//   String id;
+//   String name;
+//   double balance;
+// };
+
+// struct Account {
+//   String id;
+//   String name;
+//   double balance;
+// } NewAcct = {"123-456-000", "Justin Brown", 1992};
+
+// typedef struct Account {
+//   String id;
+//   String name;
+//   double balance;
+// };
+
+typedef struct Account {
   String id;
   String name;
   double balance;
-};
+} Account;
 
 void printAcct(struct Account acct) {
   printf("Account(%s, %s, %f)\n", acct.id, acct.name, acct.balance);
@@ -22,7 +40,7 @@ int main()
                           {.name = "Mr.Middle", .id = "555-555-555", .balance = 5568},
                           {.balance = 1000000, .name = "Mr.Rich", .id = "999-999-990"}
                           };
-  int lengthAC = sizeof(acct3) / sizeof(acct3[0]); //Find the length of array
+  int lengthAC = sizeof(acct3) / sizeof(acct3[0]); //The formula that how we find the length of array
   printf("LengthAC: %d\n", lengthAC);
   acct.id = "123-456-789";
   acct.name = "Albert Cheng";
