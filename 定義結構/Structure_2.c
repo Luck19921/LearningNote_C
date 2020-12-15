@@ -10,20 +10,20 @@ typedef struct Account {
 
 void deposit(Account *acct, double amount) {
   printf("Doing deposit %f dollars\n", amount);
-    if(amount <= 0) {
-        puts("必須存入正數");
-        return;
-    }
-    acct->balance += amount;
+  if(amount <= 0) {
+      puts("Need to deposit a postive number.");
+      return;
+  }
+  acct->balance += amount;
 }
 
 void withdraw(Account *acct, double amount) {
   printf("Doing withdraw %f dollars\n", amount);
-    if(amount > acct->balance) {
-        puts("You don't have enough balance.");
-        puts("Widthdraw fail.");
-        return;
-    }
+  if(amount > acct->balance) {
+      puts("You don't have enough balance.");
+      puts("Widthdraw fail.");
+      return;
+  }
     puts("Withdraw successfully.");
     acct->balance -= amount;
 }
