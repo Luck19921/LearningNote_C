@@ -9,7 +9,7 @@ typedef struct Account {
 
   char *_to_str;
 
-  //定義架構內的function
+  //可以令函式也成為結構成員之一
   void (*deposit)(struct Account*, double);
   void (*withdraw)(struct Account*, double);
   String (*to_str)(struct Account*);
@@ -23,6 +23,8 @@ void deposit(Account *acct, double amount) {
   }
   puts("Deposit successfully.");
   acct->balance += amount;
+  //如果使用結構宣告的指標來讀取成員, 必須使用->運算子
+  //因為傳遞的是結構實例的位址
 }
 
 void withdraw(Account *acct, double amount) {
@@ -55,19 +57,23 @@ String to_str(Account *acct) {
     return acct->_to_str;
 }
 
+//new_account是Account的實例
 Account* new_account (String id, String name, double balance) {
   Account *acct = (Account*) malloc(sizeof(Account));
+  //變數成員
   acct->id = id;
   acct->name = name;
   acct->balance = balance;
   acct->to_str = NULL;
 
+  //函式成員
   acct->deposit = deposit;
   acct->withdraw = withdraw;
   acct->to_str = to_str;
   return acct;
 }
 
+//Releasing memory storage
 void del_account(Account *acct) {
   free(acct->to_str);
   free(acct);
@@ -78,6 +84,6 @@ int main() {
   acct->deposit(acct, 700);
   acct->withdraw(acct, 200);
   printf("%s\n", acct->to_str(acct));
-  del_account(acct);
+  del_account(acct); //release memory storage
   return 0;
 }
