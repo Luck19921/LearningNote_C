@@ -11,15 +11,15 @@ int main() {
   scanf("%c", &input);
   asciiNum = (int)input;
   if (asciiNum >= 65 && asciiNum <=90) {
-    printf("Upper case!\n");
+    printf("Upper case -> Lower case\n");
     printf("Input:%c\n", input);
     output = input + 32;
-    printf("Result: %c\n", output);
+    printf("Lower Case: %c\n", output);
   } else if (asciiNum >= 97 && asciiNum <= 122) {
-    printf("Lower case!\n");
+    printf("Lower case -> Upper case\n");
     printf("Input:%c\n", input);
     output = input - 32;
-    printf("Result: %c\n", output);
+    printf("Upper Case: %c\n", output);
   } else {
     printf("Out of the range...\n");
   }
