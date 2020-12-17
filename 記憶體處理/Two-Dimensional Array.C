@@ -28,4 +28,5 @@ int main(void) {
       free(arr[i]);
     }
     free(arr);
+    return 0;
 }
