@@ -1,0 +1,5 @@
+all: project
+project:	max_num.o max.o
+		gcc -o project.exe max_num.o max.o
+sub: max_num.c max.c max.h
+		gcc -c *.c
