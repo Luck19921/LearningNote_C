@@ -6,6 +6,5 @@ int main() {
   scanf("%c", &inAnswer);
   outAnswer = inAnswer + 32;
   printf("%c\n", outAnswer);
-
   return 0;
 }
