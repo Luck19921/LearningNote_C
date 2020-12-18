@@ -1,0 +1,23 @@
+#註解 Marco = value
+#CC變數的值將會是gcc
+CC = gcc
+OBJ = myBody.o func1.o
+
+all: project run
+
+run:
+		./myBody
+
+.PHONY: clean
+clean:
+		@echo "Now Cleanning..."
+		rm -f *.o
+
+project: myBody.o func1.o
+		$(CC) -o myBody ${OBJ}
+
+#myBody.o: myBody.c func1.h
+#		$(CC) -c myBody.c
+#
+#func1.o: func1.c func1.h
+#		$(CC) -c func1.c
