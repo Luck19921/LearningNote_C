@@ -1,0 +1,25 @@
+#註解 Marco = value
+#CC變數的值將會是gcc
+CC = gcc
+OBJ = myBody.o func1.o
+
+run: myBody
+		myBody.exe
+
+myBody: myBody.o func1.o
+		$(CC) -o myBody.exe $(OBJ)
+
+myBody.o: func1.h myBody.c
+		$(CC) -c myBody.c
+
+func1.o: func1.h #func1.c  #由於隱性規則可使makefile變得更簡潔
+		#$(CC) -c func1.c
+
+.PHONY: clean
+clean:
+		@echo "Now Cleanning..."
+		-del *.o
+
+
+#Windows commander using del to delete files
+#Therefore, mac use -rm to delete files
