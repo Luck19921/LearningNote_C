@@ -11,6 +11,5 @@ int main(void)
     printf("%d\n", func1(10, i));
     ///printf("%s\n", MYNAME);
   }
-  system("pause");
   return 0;
 }
