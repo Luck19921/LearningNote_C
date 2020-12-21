@@ -10,7 +10,7 @@ int main() {
 
   for(int i = 0; i < 58; i++) {
     printf("%c\n", ch);
-    ch += 1;
+    ch = ch+1;
   }
   return 0;
 }
