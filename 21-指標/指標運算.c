@@ -24,5 +24,6 @@ int main(void) {
   指標的加減法與一般數值的加減法不同。
   在指標運算上 +1 -> 表示前進一個資料型態的記憶體長度
   Ex:在int型態的指標上加一 => 記憶體位址前進4個位元組的長度
+  https://openhome.cc/Gossip/CGossip/PointerArithmetic.html
   */
 }
