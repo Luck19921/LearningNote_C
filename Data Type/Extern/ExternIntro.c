@@ -4,6 +4,8 @@
 #include "ExternTestFolder/ExternIntro_test2.c"
 #include "myHeader.h"
 
+
+
 int main()
 {
   extern double v;
@@ -11,6 +13,7 @@ int main()
 
   v = 2000;
   //c = 19;
+
   printf("%f\n", v);
   printf("%f\n", c);
   myHeader = 1087;
