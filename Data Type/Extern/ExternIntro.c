@@ -4,18 +4,21 @@
 #include "ExternTestFolder/ExternIntro_test2.c"
 #include "myHeader.h"
 
-
+struct RDD2 myS;
 
 int main()
 {
   extern double v;
   extern double c;
-
+  myS.number = 19008421;
+  snprintf(myS.name, sizeof(myS.name), "%s", "Albert Cheng");
   v = 2000;
   //c = 19;
-
+  
   printf("%f\n", v);
   printf("%f\n", c);
+  printf("myS.number: %d\n", myS.number);
+  printf("myS.name: %s\n", myS.name);
   myHeader = 1087;
   printf("myHeader: %f\n", myHeader);
   return 0;
