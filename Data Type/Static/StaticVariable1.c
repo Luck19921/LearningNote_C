@@ -2,11 +2,13 @@
 #include <stdlib.h>
 
 void count();
+void myPrint1();
 
 int main()
 {
   for (int i = 0; i < 10; i ++) {
     count();
+    myPrint1();
   }
 }
 
@@ -14,6 +16,12 @@ void count() {
   static int c = 1;
   printf("C value is %d\n", c);
   c++;
+}
+
+void myPrint1() {
+  static char buf[256] = {0};
+  snprintf(buf, sizeof(buf), "%s", "Hello Static Printer here.");
+  printf("%s\n", buf);
 }
 
 /*

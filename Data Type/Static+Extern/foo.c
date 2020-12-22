@@ -1,1 +1,1 @@
-static double v = 2020;
+static double v;

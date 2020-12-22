@@ -6,6 +6,7 @@
 int main()
 {
   //extern double v = 1009; Error occur
+  v = 2020;
   for (int i = 0; i < 10; i ++) {
     v ++;
     foo();
