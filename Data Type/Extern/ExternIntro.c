@@ -4,21 +4,23 @@
 #include "ExternTestFolder/ExternIntro_test2.c"
 #include "myHeader.h"
 
-struct RDD2 myS;
+struct RDD2 myS; //先宣告myS 以RDD2架構為類型(可以繼承原RDD2下的成員)
 
 int main()
 {
   extern double v;
   extern double c;
   myS.number = 19008421;
+  snprintf(myS.departure, sizeof(myS.departure), "%s", "RDDII");
   snprintf(myS.name, sizeof(myS.name), "%s", "Albert Cheng");
   v = 2000;
   //c = 19;
-  
+
   printf("%f\n", v);
   printf("%f\n", c);
   printf("myS.number: %d\n", myS.number);
   printf("myS.name: %s\n", myS.name);
+  printf("myS.departure: %s\n", myS.departure);
   myHeader = 1087;
   printf("myHeader: %f\n", myHeader);
   return 0;
