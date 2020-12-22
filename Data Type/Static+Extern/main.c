@@ -10,6 +10,8 @@ int main()
   for (int i = 0; i < 10; i ++) {
     v ++;
     foo();
+
+    foo2();
     printf("%f\n", v);
   }
   return 0 ;

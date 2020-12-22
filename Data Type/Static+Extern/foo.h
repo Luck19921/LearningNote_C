@@ -2,6 +2,10 @@ static void foo() {
   printf("This is foo...!\n");
 }
 
+void foo2() {
+  printf("This is foo2...!\n");
+}
+
 /*
 實作foo()在header file
 使用Static修飾該Fucntion
