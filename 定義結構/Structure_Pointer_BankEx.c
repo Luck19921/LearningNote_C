@@ -17,19 +17,19 @@ typedef struct Account {
 
 void deposit(Account *acct, double amount) {
   printf("Doing deposit %f dollars\n", amount);
-  if(amount <= 0) {
+  if(amount <= 0) {//當存入金額小於等於零時 錯誤!
       puts("Need to deposit a postive number.");
       return;
   }
   puts("Deposit successfully.");
   acct->balance += amount;
-  //如果使用結構宣告的指標來讀取成員, 必須使用->運算子
+  //如果使用結構宣告的指標變數(acct)來讀取成員, 必須使用->運算子
   //因為傳遞的是結構實例的位址
 }
 
 void withdraw(Account *acct, double amount) {
   printf("Doing withdraw %f dollars\n", amount);
-  if(amount > acct->balance) {
+  if(amount > acct->balance) {//當取款金額大於剩餘餘額時 錯誤!
       puts("You don't have enough balance.");
       puts("Widthdraw fail.");
       return;
@@ -39,11 +39,7 @@ void withdraw(Account *acct, double amount) {
 }
 
 String to_str(Account *acct) {
-    int n = snprintf(NULL, 0,
-        "Account(%s, %s, %f)",
-        acct->id, acct->name, acct->balance
-    );
-
+    int n = snprintf(NULL, 0, "Account(%s, %s, %f)", acct->id, acct->name, acct->balance);
     if(acct->_to_str != NULL) {
         free(acct->to_str);
     }

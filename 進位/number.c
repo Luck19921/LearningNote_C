@@ -22,7 +22,7 @@ int main()
 
 /*
 N進位制轉十進位
-Unfinish 有bug
+!! Unfinish 有bug !!
 
 
 int main()
