@@ -3,6 +3,7 @@
 
 typedef const char* String;
 typedef struct Account {
+  //以下變數皆被納入Account結構下的成員變數
   String id;
   String name;
   double balance;
