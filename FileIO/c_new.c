@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 int main()
 {
    FILE *fp; //創建fp指標的FILE類型變數
@@ -10,5 +11,5 @@ int main()
    fclose(fp); //關閉檔案(當初開啟檔案的變數名稱)
    printf("Albert Just Did Something at file.txt...\n");
    //getchar();
-   return(0);
+   return 0;
 }
