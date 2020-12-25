@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int openNo2() {
+  FILE *fp2;
+  fp2 = fopen("file2.txt", "w");
+  fprintf(fp2, "%s", "This is no.2 text here.\n");
+  fprintf(fp2, "%s", "There is no.2 paragraph here.\n");
+  fclose(fp2);
+}
+
 int main()
 {
    FILE *fp; //創建fp指標的FILE類型變數
@@ -11,5 +19,6 @@ int main()
    fclose(fp); //關閉檔案(當初開啟檔案的變數名稱)
    printf("Albert Just Did Something at file.txt...\n");
    //getchar();
+   openNo2();
    return 0;
 }
