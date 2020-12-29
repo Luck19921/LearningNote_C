@@ -17,7 +17,7 @@ int main()
    fprintf(fp, "%s", "fprintf(fopen的變數, %s是輸入格式, 將被輸入的內容);\n");
    //會接續上一段fprintf的內容繼續編輯文件
    fclose(fp); //關閉檔案(當初開啟檔案的變數名稱)
-   printf("Albert Just Did Something at file.txt...\n");
+   printf("Albert Just Wrote Something at file.txt...\n");
    //getchar();
    openNo2();
    return 0;
