@@ -1,21 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//typedef 架構classFormat與宣告內部成員變數後
-//也叫作myClass
-typedef struct classFormat {
+//typedef 架構classFormat與宣告內部成員變數後 也叫作myClass
+//若_classFormat處為空，必須在架構尾端加上所告的架構變數名稱(ex: myClass)
+typedef struct _classFormat {
   char *name;
   int num; //student number
   int age;
   char group; //Class group ex: A, B, C, D, E
   int score_1; //Subject Score
   int score_2;
-  //int score_3;
-  //int score_4;
 } myClass;
+
+/*
+//這樣宣告也可以
+typedef struct {
+  char *name;
+  int num; //student number
+  int age;
+  char group; //Class group ex: A, B, C, D, E
+  int score_1; //Subject Score
+  int score_2;
+} myClass;
+myClass class_1;
+*/
 
 int main() {
   myClass instance_A; //宣告instance_A變數為myClass架構型態
+  /* 如下宣告也可以使用 */
+  //struct _classFormat instance_A;
+
   //有myClass屬性後，底下的name num age group...等都是架構成員(變數)
   //myClass是一個strcut屬性的架構
   instance_A.name = "Albert";
@@ -29,8 +43,8 @@ int main() {
   printf("Student Number: %d\n", instance_A.num);
   printf("Student Age: %d\n", instance_A.age);
 
-  struct classFormat instance_B;
-
+  struct _classFormat instance_B;
+  //加上結構型態修飾在前
   instance_B.name = "Test2";
   instance_B.age = 18;
 
