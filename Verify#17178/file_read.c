@@ -6,12 +6,12 @@ int main()
 {
    FILE *fp; //創建fp指標的FILE類型變數
    FILE *fp2;
-   char buf[256];
-   char buf2[256];
-   char tmp[256] = {0};
-   char tmp2[256] = {0};
+   char buf[50];
+   char buf2[50];
+   char tmp[50] = {0};
+   char tmp2[50] = {0};
    char *delim = "zain=";
-   char *delim2 = "()";
+   char *delim2 = "";
    memset(buf, 0, sizeof(buf));
    memset(buf2, 0, sizeof(buf2));
 
@@ -19,11 +19,20 @@ int main()
    fgets(buf, sizeof(buf), fp);
    snprintf(tmp, sizeof(tmp), "%s", strtok(buf, delim));
 
+   printf("tmp: %s, bytes: %d\n", buf, tmp);
+   printf("strtok(buf, delim) =%s\n", strtok(buf, delim));
+
    fp2 = fopen("software_version", "r");
    fgets(buf2, sizeof(buf2), fp2);
    snprintf(tmp2, sizeof(tmp2), "%s", strtok(buf2, delim2));
+   printf("tmp2: %s, bytes: %d\n", buf2, tmp2);
+   printf("strtok(buf, delim2) =%s\n", buf2,tmp2);
    //snprintf(tmp2, sizeof(tmp2), "%s", buf2);
 
+   int rtn = strcmp(buf, buf2);
+   printf("@@@@@@@@@@@@@@@@@@@@@\n");
+   printf("STRCMP rtn: %d\n", rtn);
+   printf("@@@@@@@@@@@@@@@@@@@@@\n");
    // char *token;
    //
    // token = ;
