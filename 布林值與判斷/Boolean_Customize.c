@@ -8,17 +8,26 @@
 
 int main()
 {
-  int updateOrNot = 0;
+  int updateOrNot = -100;
 
   //改變updateOrNot int數值
   // updateOrNot += 1;
 
-  if (updateOrNot == UpgradeFalse)
-  {
-    printf("Update Status: False, updateOrNot = 0\n");
+  updateOrNot = UpgradeTure;
+
+  if (updateOrNot = -100) {
+    printf("-100!!!!!!!");
   } else {
-    printf("Update Status: True, updateOrNot = 1\n");
+    if (updateOrNot == UpgradeFalse)
+    {
+      printf("Update Status: False, updateOrNot = 0\n");
+    } else {
+      printf("Update Status: True, updateOrNot = 1\n");
+    }
   }
+
+
+
 
   return 0;
 }
