@@ -36,8 +36,8 @@ int main()
    int rtn = strcmp(buf, buf2);
    int rtn2 = strcmp(tmp, tmp2);
    printf("@@@@@@@@@@@@@@@@@@@@@\n");
-   printf("<BEFORE> Comparing buf & buf2, return value: %d\n", rtn);
-   printf("<AFTER> Comparing  tmp & tmp2, return value: %d\n", rtn2);
+   printf("|< BEFORE > | Comparing buf & buf2, return value: %d\n", rtn);
+   printf("|< AFTER  > | Comparing tmp & tmp2, return value: %d\n", rtn2);
    printf("@@@@@@@@@@@@@@@@@@@@@\n");
    // char *token;
    //
