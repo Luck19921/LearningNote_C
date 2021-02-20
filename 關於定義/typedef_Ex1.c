@@ -8,7 +8,7 @@ int main() {
 
   printf("Value of number1: %c\n", number1);
   printf("Value of number2: %c\n", number2);
-  printf("number's data type(unsigned char) is equal to number2.\n");
+  printf("number1's data type(unsigned char) is equal to number2.\n");
 
   return 0;
 }
