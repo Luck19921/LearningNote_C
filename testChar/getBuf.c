@@ -8,7 +8,7 @@ int main()
   char buf2[50] = {0};
   char v_buf[50] = {0};
 
-  snprintf(buf1, sizeof(buf1), "%s", "Zain");6
+  snprintf(buf1, sizeof(buf1), "%s", "Zain");
   snprintf(buf2, sizeof(buf2), "%s", "Spain");
   snprintf(v_buf, sizeof(v_buf), "%s", "Zain");
 
